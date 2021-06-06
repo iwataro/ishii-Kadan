@@ -1,0 +1,98 @@
+@import "variable";
+
+
+.works__wrapper {
+    width: 100%;
+    background-color: $bgColor;
+
+
+    &__ttl {
+        padding-top: 200px;
+        color: $color1;
+        @include tab {
+            padding-top: 120px;
+        }
+    }
+}
+
+.works__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    @include sp {
+        padding-top: 70px;
+    }
+
+    &__card {
+        width: 300px;
+        margin-bottom: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    &__img {
+        display: block;
+        width: 300px;
+        height: 210px;
+        object-fit: cover;
+        border: 2px solid $color1;
+        transition: .5s;
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &_contain {
+            display: block;
+            width: 300px;
+            height: 210px;
+            object-fit: contain;
+            border: 2px solid $color1; 
+            transition: .5s;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__ttl {
+        color: $color1;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 1.5;
+        @include lineHeightCrop(1.5);
+        @include sp {
+            font-size: 13px;
+        }
+    }
+}
+
+.page-header {
+    background-color: $bgColor;
+}
+
+.page-footer {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    background-color: $color1;
+    color: $color2;
+    font-size: 18px;
+    line-height: 80px;
+    text-align: right;
+    @include tab {
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+    }
+    @include sp {
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+}
+
