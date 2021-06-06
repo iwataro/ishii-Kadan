@@ -1,0 +1,271 @@
+@import "variables";
+
+
+.page-room-fv {
+    @include page-fv;
+    background-image: url(../image/oheya-header.png);
+  }
+
+.page-cuisine-fv {
+    @include page-fv;
+    background-image: url(../image/menu-header.png);
+}
+
+.page-onsen-fv {
+    @include page-fv;
+    background-image: url(../image/onsen-header.png);
+}
+
+
+  
+  // インナー幅 
+  .page__inner {
+    max-width: 1240px;
+    margin:  0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    @include tab {
+      max-width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  
+  // ページコンテンツ
+  .page__container {
+    width: 100%;
+  }
+  
+  .page__txt {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    line-height: 2;
+    padding-top: 62px;
+    @include lineHeightCrop(2);
+    @include sp {
+      font-size: 12px;
+      padding-top: 40px;
+    }
+  }
+  
+  .page__contents {
+    width: 100%;
+    padding-top: 78px;
+    padding-bottom: 288px;
+    overflow: hidden;
+    @include tab {
+        padding-bottom: 150px;
+    }
+    @include sp {
+      padding-bottom: 80px;
+    }
+    &_pad {
+        padding-bottom: 96px;
+    }
+  }
+  
+  .page__content {
+    width: 100%;
+    height: 438px;
+    position: relative;
+    &_reverse_mg {
+      width: 100%;
+      height: 438px;
+      position: relative;
+      margin-top: 222px;
+      margin-bottom: 222px;
+
+      @include tab {
+        margin-top: 90px;
+        margin-bottom: 90px;
+      }
+      @include sp {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+  
+  
+    &__img {
+      width: 44.5%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      @include sp {
+        width: 70%;
+      }
+      &_position {
+        width: 44.5%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        @include sp {
+          width: 70%;
+        }
+      }
+    }
+  
+    &__box {
+      width: 68.9%;
+      height: 381px;
+      padding-top: 60px;
+      padding-left: 238px;
+      padding-right: 68px;
+      background-image: url(../image/bg2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 57px;
+      right: 0;
+      @include tab {
+        width: 65%;
+        height: 320px;
+        top: 75px;
+        padding-top: 40px;
+        padding-left: 120px;
+        padding-right: 30px;
+      }
+      @include sp {
+        width: 90%;
+        padding-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      &_position {
+        width: 68.9%;
+        height: 381px;
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 40px;
+        background-image: url(../image/bg2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 57px;
+        left: 0;
+        @include tab {
+          width: 65%;
+          height: 320px;
+          top: 75px;
+          // left: 20px;
+          padding-top: 40px;
+          padding-right: 80px;
+          padding-left: 40px;
+        }
+        @include sp {
+          width: 90%;
+          padding-top: 90px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+  
+    &__ttl {
+      font-size: 24px;
+      @include tab {
+        font-size: 22px;
+      }
+      @include sp {
+        font-size: 20px;
+      }
+    }
+  
+    &__txt {
+      font-size: 16px;
+      line-height: 2;
+      @include lineHeightCrop(2);
+      padding-top: 52px;
+      padding-bottom: 52px;
+      @include tab {
+        font-size: 14px;
+        line-height: 1.69;
+        @include lineHeightCrop(1.69);
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      @include sp {
+        font-size: 13px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  
+    &__attention {
+      font-size: 14px;
+      line-height: 1.5;
+      @include sp {
+        font-size: 12px;
+      }
+    }
+  
+  }
+  
+
+.page__table {
+    width: 100%;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    padding-top: 95px;
+    padding-bottom: 74px;
+    @include sp {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    &__inner {
+        width: 880px;
+        margin: 0 auto;
+        @include tab {
+            width: 90%;
+        }
+    }
+
+    &__ttl {
+        font-size: 26px;
+        text-align: center;
+        padding-bottom: 51px;
+        @include sp {
+            padding-bottom: 30px;
+        }
+    }
+
+    table {
+        width: 100%;
+
+        tr {
+            border-top: 1px solid #E7E7E7;
+
+            &:last-child {
+                border-bottom: 1px solid #E7E7E7;
+            }
+        }
+
+        th,td {
+            font-weight: normal;
+            font-size: 15px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            @include sp {
+                font-size: 12px;
+            }
+        }
+
+        th {
+            width: 25%;
+        }
+
+        td {
+            line-height: 1.47;
+            @include lineHeightCrop(1.47);
+        }
+    }
+}
